@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Russo+One&display=swap');
+
+body {
+  background: linear-gradient(90deg, #000000, #2d2d2d);
+  font-family: 'Varela Round', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#poke-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.poke-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.poke-card::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(45deg, rgba(224, 170, 255, 0.5), rgba(255, 255, 255, 0.2));
+  z-index: -1;
+  border-radius: 15px;
+  filter: blur(10px);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.poke-card:hover::before {
+  opacity: 1;
+}
+
+.poke-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(224, 170, 255, 0.3);
+}
+
+.poke-img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  margin-top: 60px;
+}
+
+.poke-name {
+  font-family: 'Russo One', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background:  #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
+  text-shadow: 2px 2px 10px #996c8c;
+}
+
+#poke-load-more {
+  background: linear-gradient(45deg, #4a1c58, #996c8c);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(76, 0, 130, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+#poke-load-more:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(224, 170, 255, 0.6);
+}
+
+@media (max-width: 1024px) {
+  .poke-card {
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  #poke-load-more {
+    width: 80%;
+  }
+
+  .poke-card {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .poke-card {
+    width: 90%;
+    max-width: 320px;
+    height: 340px;
+    margin: auto;
+  }
+}

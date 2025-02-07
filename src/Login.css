@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    padding: 30px;
+    background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    align-items: center;
+}
+
+label{
+    color: #e0aaff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #444;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #934c7f;
+    box-shadow: 0 0 8px #934c7f;
+}
+
+.regP{
+    color:#e0aaff;
+    text-align: left;
+    width: 100%;
+    margin-left: 25px;
+}
+
+.log {
+    background: linear-gradient(45deg, #4a1c58, #934c7f);
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(76, 0, 130, 0.5);
+    padding: 14px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.log:hover {
+    background: linear-gradient(45deg, #934c7f, #4a1c58);
+    transform: scale(1.05);
+    
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 50px;
+    background-color: #333;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.social:hover {
+    background-color: #444;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(76, 0, 130, 0.5);
+}
+
+.social i {
+    font-size: 1.5rem;
+}
+
+.back {
+    margin-top: 20px;
+    color: #e0aaff;
+    font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.back:hover {
+    color: #e0aaff;
+    text-shadow: 0 0 5px #e0aaff;
+}

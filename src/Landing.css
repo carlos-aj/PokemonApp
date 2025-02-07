@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+body {
+  background: linear-gradient(90deg, #000000, #2d2d2d);
+  font-family: 'Varela Round', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5vw;
+  width: 90%;
+  max-width: 1400px;
+  max-height: 100vh;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.title {
+  color: #4a1c58;
+  font-size: clamp(50px, 12vw, 140px);
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  animation: move linear 2000ms infinite;
+}
+
+@keyframes move {
+  0% { text-shadow: 4px -4px 0 #ffffff, -4px 4px 0 #996c8c; }
+  25% { text-shadow: -4px -4px 0 #996c8c, 4px 4px 0 #ffffff; }
+  50% { text-shadow: -4px 4px 0 #ffffff, 4px -4px 0 #996c8c; }
+  75% { text-shadow: 4px 4px 0 #996c8c, -4px -4px 0 #ffffff; }
+  100% { text-shadow: 4px -4px 0 #ffffff, -4px 4px 0 #996c8c; }
+}
+
+.discover-button {
+  background: linear-gradient(45deg, #4a1c58, #996c8c);
+  color: white;
+  border: none;
+  padding: 15px 10vw;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(76, 0, 130, 0.5);
+  margin-top: 5vw;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.discover-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(76, 0, 130, 0.6);
+}
+
+
+.info-section {
+  display: flex;
+  flex-wrap: nowrap;  
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 5vh;
+  padding: 10px 0;
+}
+
+.info-box {
+  background: linear-gradient(135deg, #3a3a3a, #1f1f1f);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 auto;
+  max-width: 300px;
+  min-width: 250px;
+}
+
+.info-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.info-box h3 {
+  color: #e0aaff;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 10vw;
+  }
+
+  .discover-button {
+    padding: 12px 8vw;
+    font-size: 1.2rem;
+  }
+
+  .info-section {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .info-box {
+    flex: 0 0 250px;
+    min-width: 250px;
+  }
+}
